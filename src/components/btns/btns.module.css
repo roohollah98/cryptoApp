@@ -1,0 +1,40 @@
+.scrollBtn{
+    width: 70px;
+    height: 70px;
+    background:rgba(255, 255, 255, 0.5) url("../../images/up-arrow.png") no-repeat 50% 50%;
+    background-size: 70%;
+    background-position: center;
+    position: fixed;
+    z-index: 10;
+    right: 50px;
+    bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 5px 1px #ccc;
+}
+.backBtn{
+    width: 60px;
+    height: 40px;
+    background:rgba(255, 255, 255, 0.5) url("../../images/back.png") no-repeat 50% 50%;
+    background-size: 50%;
+    background-position: center;
+    position: fixed;
+    z-index: 10;
+    left: 30px;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5%;
+    box-shadow: 0 0 5px 1px #ccc;
+    transition: 0.5s ease-in-out;
+}
+
+.hide{
+    visibility: hidden;
+opacity: 0;
+display: none;
+
+}

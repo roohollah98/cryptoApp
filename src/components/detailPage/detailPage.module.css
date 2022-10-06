@@ -1,0 +1,130 @@
+.detailContainer{
+    padding: 20px;
+    display: flex;
+    height: 100vh;
+    
+
+}
+
+.detailContainer .coinInfo{
+    width: 30%;
+    height:100%;
+    border-right: 2px solid grey;
+    padding:  10px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.coinInfo .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+}
+.coinInfo p{
+    
+    font-size: 1.2rem;
+    border-bottom: 1px solid #c0bcbc;
+    padding: 20px 0;
+}
+.coinInfo .desc{
+    font-size: 1rem !important;
+    border-top: 1px solid #c0bcbc;
+}
+.coinInfo p span{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+figure{
+    width: auto;
+    height: 200px;
+    margin-bottom: 15px;
+}
+ figure img{
+width: 100%;
+height: 100%;
+}
+.top h2{
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.chartContainer{
+    width: 70%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+.dayBtns{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+.dayBtns button{
+  
+    cursor: pointer;
+    box-shadow: -8px -8px 25px #fff,8px 8px 25px rgba(0,0,0,0.25), inset 3px 3px 10px rgba(0,0,0,0.1), inset -1px -1px 15px #fff;
+border: 5px solid #eaeef0;
+background: #eaeef0;
+padding: 10px;
+margin-left: 10px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 180px;
+transition: 0.5s ease-in-out;
+  
+}
+.dayBtns button:hover{
+    transition: 0.5s ease-in-out;
+    background: #ff4f8b;
+    color: #fff;
+    transition: 0.5s ease-in-out;
+}
+.show{
+    background: #ff4f8b !important;
+   
+    color: rgb(255, 255, 255) !important;
+}
+
+@media only screen and (max-width:960px){
+    .detailContainer{
+        flex-direction: column;
+    }
+    .detailContainer .coinInfo{
+        width: 100%;
+        border-right: none;
+    }
+    .chartContainer{
+        width: 100%;
+    }
+}
+
+@media  only screen and (max-width: 767px) {
+    .chartContainer{
+        padding: 0;
+    }
+    .top h2{
+        font-size: 1.5rem;
+    }  
+
+    .coinInfo p {
+        font-size: 1.1rem;
+    }
+    .coinInfo p span{
+        font-size: 1.1rem;
+    }
+}

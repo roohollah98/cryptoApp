@@ -1,0 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+  scroll-behavior: smooth;
+ 
+}
+@font-face {
+  font-family: consolas;
+  src: url("./fonts/Consolas.ttf");
+}
+body{
+  min-height: 100vh;
+  background: #eaeef0;
+}
