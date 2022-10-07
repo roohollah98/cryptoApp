@@ -1,26 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./slider.module.css";
 const Slider = ({ data }) => {
 
   var r;
   const [pos, setPos] = useState(0);
-console.log(pos);
-  // const play = () => {
-  //    r = setInterval(() => {
-  //     if (pos > -70) {
-  //       setPos(prevState=>prevState - 10);
-  //     } else {
-  //       setPos(0);
 
-  //     }
-    
-  //   }, 10000);
-  // };
-  // useEffect(()=>{
-  //   console.log("is rendered")
-  //   play();
-  // },[])
+
   const leftHandler = () => {
     console.log("left");
     if (pos > -60) {
@@ -32,7 +18,7 @@ console.log(pos);
   };
 
   const rightHandler = () => {
-    console.log("right");
+  
     if (pos < 0) {
       setPos((prevState) => prevState + 15);
       console.log(pos);

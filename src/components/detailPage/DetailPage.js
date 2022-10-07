@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import sanitizeHtml from "sanitize-html";
 import { getSingleCoin } from "../../services/api";
 import style from "./detailPage.module.css";
-import img from "../../images/car/01.png";
 import CoinChart from "../coinChart/CoinChart";
 import BackBtn from "../btns/backButton";
 const DetailPage = () => {
@@ -16,8 +15,7 @@ const DetailPage = () => {
   useEffect(() => {
     fetchSingleCoin();
   }, []);
-  // console.log(chart);
-  console.log(singleCoin);
+
   if (singleCoin) {
     return (
       <div className={style.detailContainer}>
@@ -25,7 +23,6 @@ const DetailPage = () => {
           <div className={style.top}>
             <figure>
               <img src={singleCoin.image?.large} />
-              {/* <img src={img} /> */}
             </figure>
             <h2>{singleCoin.name}</h2>
           </div>

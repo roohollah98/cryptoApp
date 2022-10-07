@@ -1,10 +1,15 @@
 
 footer{
     width: 100%;
-    padding: 10px;
     text-align: center;
-    background: #221E22;
+    background: #171117;
     color:#fff;
     padding: 20px;
+  
+
+}
+footer p {
+    padding: 5px;
+    font-size: 14px;
 }
 

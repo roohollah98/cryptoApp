@@ -12,7 +12,6 @@ const Banner = () => {
     setTrend(await getTrends(currency));
   };
   useEffect(() => {
-   
     fetchTrends();
   }, [currency]);
 
@@ -22,8 +21,7 @@ const Banner = () => {
         <h2>CRYPTON</h2>
         <p>Get All The Info About Crypto Currency</p>
       </div>
-
-      <Slider data={trendCoins} />
+      {trendCoins.length && <Slider data={trendCoins} />}
     </div>
   );
 };
