@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import style from "./slider.module.css";
 const Slider = ({ data }) => {
-
   var r;
   const [pos, setPos] = useState(0);
-
-
+  const play = () => {
+    setTimeout(() => {
+      if (pos > -70) {
+        setPos((prevState) =>  prevState - 10 );
+      } else {
+        setPos(0);
+      }
+    }, 5000);
+  };
+  useEffect(() => {
+    play();
+  }, [pos]);
   const leftHandler = () => {
     console.log("left");
     if (pos > -60) {
@@ -18,7 +27,6 @@ const Slider = ({ data }) => {
   };
 
   const rightHandler = () => {
-  
     if (pos < 0) {
       setPos((prevState) => prevState + 15);
       console.log(pos);
@@ -26,7 +34,7 @@ const Slider = ({ data }) => {
       setPos(0);
     }
   };
-  
+
   return (
     <div id={style.sliderContainer}>
       <div id={style.slider}>
@@ -34,16 +42,15 @@ const Slider = ({ data }) => {
           {data.map((coin) => {
             return (
               <Link key={coin.id} to={`/coinDetail/${coin.id}`}>
-
-               <div key={coin.id} className={style.slideItem}>
-                <span>
-                  <img alt={coin.name} src={coin.image} />
-                  <i></i>
-                </span>
-                <h3>{coin.name}</h3>
-                <p>{coin.current_price}</p>
-                <button>read more</button>
-              </div>
+                <div key={coin.id} className={style.slideItem}>
+                  <span>
+                    <img alt={coin.name} src={coin.image} />
+                    <i></i>
+                  </span>
+                  <h3>{coin.name}</h3>
+                  <p>{coin.current_price}</p>
+                  <button>read more</button>
+                </div>
               </Link>
             );
           })}
