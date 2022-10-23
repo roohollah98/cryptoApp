@@ -22,7 +22,7 @@ margin-bottom: 40px;
     transition: 0.5s ease-in-out;
   
 }
-.coinContainer span{
+.coinContainer .imageContainer{
     position: relative;
     display: block;
     width: 100px;
@@ -37,7 +37,7 @@ margin-bottom: 40px;
      
 }
 
-.coinContainer span img{
+.coinContainer .imageContainer img{
     
     position: absolute;
     inset: 9px;
@@ -54,7 +54,7 @@ margin-bottom: 40px;
    z-index: 1;
 
 }
-.coinContainer span i{
+.coinContainer .imageContainer i{
     position: absolute;
     inset: 0;
     filter: blur(5px);
@@ -62,7 +62,7 @@ margin-bottom: 40px;
     border-radius: 50%;
  
 }
-.coinContainer:hover span>i{
+.coinContainer:hover .imageContainer>i{
     animation: animate 1s linear infinite;
 }
 .greenPriceChange{
@@ -89,17 +89,32 @@ font-weight: bold;
 
   
 }
-.coinContainer p:first-child{
-    font-weight: bold;
+.coinContainer p span{
+    display: none;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 10px;
 }
+.coinContainer p.currentPrice{
+    width: 120px ;
+}
+.coinContainer p.coinSymbol{
+
+    width: 60px;
+}
+
 .coinContainer p:last-child{
     width: 140px;
 }
 .greenPriceChange{
 color: rgb(0,204,0);
+width: 60px !important;
+
 }
 .redPriceChange{
 color:rgb(255,38,38);
+width: 60px !important;
 }
 
 /*responsive*/
@@ -118,7 +133,7 @@ color:rgb(255,38,38);
   
 }
 @media only screen and (max-width:767px){
-    .coinContainer span img{
+    .coinContainer .imageContainer img{
        width: 100%;
        height: 100%;
        inset: 0;
@@ -128,7 +143,7 @@ color:rgb(255,38,38);
     }
 }
 
-@media only screen and (max-width:480px){
+@media only screen and (max-width:590px){
     .coinContainer{
         flex-direction: column;
         padding: 20px;
@@ -137,9 +152,12 @@ color:rgb(255,38,38);
     }
     .coinContainer p{
        width: 100% !important;
-       font-size: 0.7rem;
+       font-size: 0.9rem;
        text-align: left;
        margin-top: 12px;
+    }
+    .coinContainer p span{
+        display: inline-block;
     }
 }
 /*animation*/

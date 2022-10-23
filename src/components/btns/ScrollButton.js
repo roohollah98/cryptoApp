@@ -4,7 +4,7 @@ const ScrollButton = () => {
   useEffect(() => {
     window.onscroll = () => {
       console.log(window.scrollY);
-      if (window.pageYOffset > 140) {
+      if (window.pageYOffset > 500) {
         setScroll(true);
       } else {
         setScroll(false);
@@ -15,7 +15,7 @@ const ScrollButton = () => {
   return (
     <div
       onClick={() => {
-        window.scrollTo({top:0,behavior:"smooth"})
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }}
       className={scroll ? style.scrollBtn : style.hide}
     ></div>

@@ -11,13 +11,13 @@ const Coin = ({ data }) => {
   } = data;
   return (
     <div className={style.coinContainer}>
-      <span>
+      <span className={style.imageContainer}>
         <img src={image} alt={name} />
         <i> </i>
       </span>
-      <p>{name}</p>
-      <p>{symbol.toUpperCase()}</p>
-      <p className={style.currentPrice}>${current_price.toLocaleString()}</p>
+      <p className={style.coinName}><span>Name: </span>{name}</p>
+      <p className={style.coinSymbol}><span>Symbol: </span>{symbol.toUpperCase()}</p>
+      <p className={style.currentPrice}><span>Current Price: </span>${current_price.toLocaleString()}</p>
       <p
         className={
           price_change_percentage_24h > 0
@@ -25,9 +25,10 @@ const Coin = ({ data }) => {
             : style.redPriceChange
         }
       >
-        {price_change_percentage_24h}
+      <span>price changes: </span>
+        {`${price_change_percentage_24h.toFixed(2) }%`}
       </p>
-      <p>{market_cap.toLocaleString()}</p>
+      <p className={style.marketCap}><span>market cap: </span>{market_cap.toLocaleString()}</p>
     </div>
   );
 };

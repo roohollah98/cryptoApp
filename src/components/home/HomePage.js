@@ -41,7 +41,7 @@ const {currency}=useContext(CoinContext);
         <h2>Cryptocurrency Prices by Market Cap</h2>
         <div className={style.inputContainer}>
           <input
-        
+          
             value={value}
             onChange={(e) => {
               setValue(e.target.value);
@@ -53,6 +53,18 @@ const {currency}=useContext(CoinContext);
         </div>
          
         <div className={style.coinBox}>
+        <div className={style.topContainer}>
+        <div className={style.topItem}></div>
+
+          <div className={style.topItem}>Name</div>
+          <div className={style.topItem}>Symbol</div>
+          <div className={style.topItem}>Current </div>
+          <div className={style.topItem}>Changes</div>
+          <div className={style.topItem}>Market Cap</div>
+
+
+
+        </div>
           {newCoinsList
             .slice((pageNumber - 1) * perpage, (pageNumber - 1) * perpage + perpage)
             .map((coin) => {
